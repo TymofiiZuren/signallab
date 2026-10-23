@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.scratch/
+artifacts/
+data/reviews.csv
+.streamlit/secrets.toml
+.env
+
+# Local inputs and private configuration
+data/
+.env.*
+!.env.example
+.streamlit/secrets.*
+.DS_Store
+.pytest_cache/
