@@ -1,0 +1,39 @@
+[theme]
+base = "dark"
+primaryColor = "#F6821F"
+backgroundColor = "#111111"
+secondaryBackgroundColor = "#1B1B1B"
+textColor = "#F5F2ED"
+font = "Signal Sans, sans-serif"
+headingFont = "Signal Sans, sans-serif"
+headingFontSizes = ["3.75rem", "2.25rem", "1.5rem"]
+headingFontWeights = [500, 500, 500]
+baseFontSize = 16
+baseRadius = "0.5rem"
+buttonRadius = "full"
+borderColor = "#414141"
+dataframeBorderColor = "#414141"
+dataframeHeaderBackgroundColor = "#252525"
+showWidgetBorder = true
+linkColor = "#FFA257"
+chartCategoricalColors = ["#F6821F", "#8CB5F6"]
+
+[[theme.fontFaces]]
+family = "Signal Sans"
+url = "app/static/fonts/DMSans-variable.ttf"
+weight = "100 1000"
+style = "normal"
+
+[theme.sidebar]
+backgroundColor = "#111111"
+secondaryBackgroundColor = "#252525"
+textColor = "#F5F2ED"
+headingFontSizes = ["1.75rem", "1.25rem", "1.125rem"]
+headingFontWeights = [600, 500, 500]
+
+[server]
+maxUploadSize = 10
+enableStaticServing = true
+
+[browser]
+gatherUsageStats = false

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-23T15:47:54.920389+00:00",
+  "title": "Design System: SignalLab",
+  "extensions": {
+    "typographyMeta": {
+      "display": {
+        "displayName": "Workflow display",
+        "purpose": "Orange introduction heading; locally hosted DM Sans under the Signal Sans alias."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "intro-reveal",
+        "value": "500ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Clip-path introduction reveal; disabled by prefers-reduced-motion: reduce."
+      },
+      {
+        "name": "signal-dot-sweep",
+        "value": "4s cubic-bezier(0.16, 1, 0.3, 1), one iteration",
+        "purpose": "Masked light-dot sweep behind the intro copy; settles to transparent. Static dark dots remain. Reduced-motion hides the sweep; no perpetual animation."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "main-column-wrap",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile",
+        "value": "768px"
+      }
+    ],
+    "introDotTexture": {
+      "spacing": "6px",
+      "mobileSpacing": "5px",
+      "mobileBreakpoint": "768px",
+      "darkDotRadius": "0.8px",
+      "lightDotRadius": "0.9px",
+      "pointerEvents": "none"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Presentation sample of the native primary action; production keeps Streamlit behavior.",
+      "html": "<button class=\"ds-primary\">Run baseline comparison</button>",
+      "css": ".ds-primary{font-family:var(--signal-font, \"Signal Sans\", sans-serif);background:var(--signal-accent,#f6821f);color:var(--signal-on-accent,#17120c);font-weight:600;min-height:44px;padding-inline:1.5rem;border:1px solid var(--signal-accent,#f6821f);border-radius:9999px}.ds-primary:hover:not(:disabled){background:#ffa257;border-color:#ffa257}.ds-primary:active:not(:disabled){background:var(--signal-accent,#f6821f)}.ds-primary:focus-visible{outline:2px solid var(--signal-interactive,#ffa257);outline-offset:4px;}"
+    },
+    {
+      "name": "Workflow introduction",
+      "kind": "card",
+      "refersTo": "page-intro",
+      "description": "The shared orange introduction container.",
+      "html": "<section class=\"ds-intro\"><h1>Explore reviews</h1><p>Understand the data before asking a model to learn from it.</p></section>",
+      "css": ".ds-intro{font-family:var(--signal-font, \"Signal Sans\", sans-serif);background:var(--signal-accent,#f6821f);color:var(--signal-on-accent,#17120c);border-radius:1rem;padding:2.5rem 3rem}.ds-intro h1{font-size:clamp(2.25rem,4.5vw,4rem);font-weight:500;line-height:1.05;letter-spacing:-.03em;text-wrap:balance}.ds-intro p{font-size:1.0625rem;line-height:1.6;max-width:65ch}@media(max-width:768px){.ds-intro{padding:2rem 1.5rem}}"
+    },
+    {
+      "name": "Workspace navigation",
+      "kind": "nav",
+      "description": "Semantic radio sample of the native sidebar navigation. Native widget geometry remains framework-owned.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Workspace\"><label><input type=\"radio\" name=\"workspace\" checked> Explore</label><label><input type=\"radio\" name=\"workspace\"> Experiments</label></nav>",
+      "css": ".ds-nav{font-family:var(--signal-font, \"Signal Sans\", sans-serif);background:var(--signal-canvas,#111111);color:var(--signal-ink,#f5f2ed)}.ds-nav label{display:flex;align-items:center;min-height:44px}.ds-nav label:has(input:checked){color:#ffa257;font-weight:600}.ds-nav input:focus-visible{outline:2px solid var(--signal-interactive,#ffa257);outline-offset:4px;}"
+    },
+    {
+      "name": "Review text field",
+      "kind": "input",
+      "description": "Native field theme sample. Streamlit owns actual field padding and widget state geometry.",
+      "html": "<label class=\"ds-field\">Find words in reviews <input placeholder=\"Try battery, delivery, quality\u2026\"></label>",
+      "css": ".ds-field{font-family:var(--signal-font, \"Signal Sans\", sans-serif);color:var(--signal-ink,#f5f2ed)}.ds-field input{font-family:var(--signal-font, \"Signal Sans\", sans-serif);background:var(--signal-surface,#1b1b1b);color:var(--signal-ink,#f5f2ed);border:1px solid var(--signal-line,#414141);border-radius:.5rem;caret-color:var(--signal-accent,#f6821f)}.ds-field input:focus-visible{outline:2px solid var(--signal-interactive,#ffa257);outline-offset:4px;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The inspectable research workspace",
+    "overview": "The user-approved Cloudflare.com reference supplies the charcoal canvas, saturated orange introduction, warm-white text, rounded actions and spacious sans typography. This direction supersedes the previous light-green visual system. SignalLab retains its own identity and operational purpose; the reference does not authorize Cloudflare branding or marketing claims.\n\nNative Streamlit controls, real charts and evidence tables remain the working surface. The orange introduction establishes hierarchy while visible provenance and limitations keep experiments honest.",
+    "keyCharacteristics": [
+      "Charcoal workspace with an orange introduction per workflow.",
+      "Locally hosted sans typography and restrained outlines.",
+      "Native semantic controls with explicit states and sentiment labels."
+    ],
+    "rules": [
+      {
+        "name": "The Evidence Rule",
+        "body": "Color supports labels and measured data; it never substitutes for sentiment names or provenance.",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "**Do** use native Streamlit theme settings and semantic controls before adding presentation CSS.",
+      "**Do** retain explicit sentiment labels, provenance and measured-result caveats.",
+      "**Do** preserve the 1100px and 768px wrapping behavior and reduced-motion override."
+    ],
+    "donts": [
+      "**Don't** restore the superseded light-green palette.",
+      "**Don't** copy Cloudflare branding or imply a relationship with Cloudflare.",
+      "**Don't** replace working controls, charts or tables with decorative HTML imitations."
+    ]
+  }
+}
